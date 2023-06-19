@@ -29,6 +29,8 @@ fun Application.kounters() {
 		allowMethod(HttpMethod.Post)
 		allowMethod(HttpMethod.Put)
 		allowMethod(HttpMethod.Delete)
+		allowHeader(HttpHeaders.ContentType)
+		allowHeader(HttpHeaders.Accept)
 	}
 
 	val counterRepository = MongoCounterRepository()
