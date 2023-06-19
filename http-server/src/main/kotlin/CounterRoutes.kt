@@ -17,6 +17,8 @@ fun Route.counterRoutes(counters: CounterService) = route("/counters") {
 		}
 
 		counters.increment(id)
+
+		call.respond(Unit)
 	}
 
 	put("{id}/decrement") {
@@ -26,6 +28,8 @@ fun Route.counterRoutes(counters: CounterService) = route("/counters") {
 		}
 
 		counters.decrement(id)
+
+		call.respond(Unit)
 	}
 
 	delete("{id}") {
@@ -35,6 +39,8 @@ fun Route.counterRoutes(counters: CounterService) = route("/counters") {
 		}
 
 		counters.delete(id)
+
+		call.respond(Unit)
 	}
 
 	post {

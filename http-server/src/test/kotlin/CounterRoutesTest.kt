@@ -3,15 +3,10 @@ package fr.demo.http.server
 import fr.demo.CounterServiceViaRepository
 import fr.demo.http.client.HttpCounterService
 import fr.demo.mongo.MongoCounterRepository
-import io.ktor.client.plugins.*
-import io.ktor.client.plugins.contentnegotiation.*
 import io.ktor.client.plugins.logging.*
 import io.ktor.serialization.kotlinx.json.*
-import io.ktor.server.application.*
-import io.ktor.server.application.*
 import io.ktor.server.testing.*
 import kotlinx.coroutines.test.runTest
-import org.apache.http.client.protocol.RequestDefaultHeaders
 import org.junit.Test
 import kotlin.test.assertContains
 import kotlin.test.assertEquals
