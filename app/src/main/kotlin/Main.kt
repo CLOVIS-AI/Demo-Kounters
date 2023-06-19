@@ -1,6 +1,5 @@
 package fr.demo.app
 
-import fr.demo.CounterService
 import fr.demo.http.client.HttpCounterService
 import io.ktor.client.*
 import io.ktor.client.plugins.*
@@ -19,11 +18,9 @@ fun main() {
 		}
 	}
 
-	counterService = HttpCounterService(httpClient)
+	val counterService = HttpCounterService(httpClient)
 
 	renderComposable(rootElementId = "root") {
-		HomePage()
+		HomePage(counterService)
 	}
 }
-
-lateinit var counterService: CounterService
